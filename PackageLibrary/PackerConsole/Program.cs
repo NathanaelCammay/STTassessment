@@ -22,4 +22,4 @@ foreach (string package in packages)
 
 /////////// 
 /// next steps would be to split items into objects, then split those individual items into their weight, cost and index
-/// Once complete, we can then do math and implement the rules
+/// Once complete, we can then do math and implement the constraints
