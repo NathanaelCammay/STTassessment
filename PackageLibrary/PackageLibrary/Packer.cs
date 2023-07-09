@@ -29,9 +29,6 @@ namespace PackageLibrary
                     while (fs.Read(b, 0, b.Length) > 0)
                     {
                          inputResult = temp.GetString(b);
-                        //Console.WriteLine(inputResult);
-
-
                     }
 
                     if (inputResult == null)

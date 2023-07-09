@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PackageLibrary",
+    "\\PackageLibrary\\PackageLibrary",
+    "\\PackageLibrary\\PackerConsole"
   ],
+  "SelectedNode": "\\PackageLibrary\\PackerConsole\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
