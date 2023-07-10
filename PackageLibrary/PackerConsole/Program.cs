@@ -47,7 +47,7 @@ foreach (string testCase in refinedTestCases)
         // set constraints based on weight and weight + cost
         if (pack.Weight < standardMaxWeight && pack.WeightPlusCost < standardMaxWeight)
         {
-            Console.WriteLine("This is a avalid pack!");
+            Console.WriteLine("This is a a valid pack!");
         }
         else
         {

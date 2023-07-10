@@ -24,7 +24,7 @@ namespace PackageLibrary
                 using (FileStream fs = File.OpenRead(absoluteFilePath))
                 {
                     byte[] b = new byte[1024];
-                    var temp = new UTF8Encoding(true);
+                    var temp = new UTF8Encoding(true);  // UTF8Encoding object
 
                     while (fs.Read(b, 0, b.Length) > 0)
                     {
