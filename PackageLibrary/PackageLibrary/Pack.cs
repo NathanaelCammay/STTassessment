@@ -14,7 +14,6 @@ namespace PackageLibrary
         public int MaxWeight { get; set; }
 
         public decimal Cost { get; set; }
-
         public decimal WeightPlusCost 
         {
             get

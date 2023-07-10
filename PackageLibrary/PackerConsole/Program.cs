@@ -33,6 +33,8 @@ foreach (string testCase in refinedTestCases)
 
     for (int i = 1; i < testCaseResult.Length; i++)
     {
+        var itemCount = 0;
+
         var pack = new Pack();
         var itemString = Helper.GetStringBetweenCharacters(testCaseResult[i], '(', ')'); // extract values from brackets
         var itemArray = itemString.Split(','); // add values to an array
@@ -42,11 +44,20 @@ foreach (string testCase in refinedTestCases)
         pack.Weight = decimal.Parse(itemArray[1]);
         pack.Cost = decimal.Parse(itemArray[2], NumberStyles.Currency);
 
+        // set constraints based on weight and weight + cost
         if (pack.Weight < standardMaxWeight && pack.WeightPlusCost < standardMaxWeight)
         {
             Console.WriteLine("This is a avalid pack!");
         }
-
+        else
+        {
+            throw new APIException("Constraints not met!");
+        }
+        itemCount++;
+        if (itemCount > 15)
+        {
+            throw new APIException("Maximum item limit reached!");
+        }
     }
 
 
