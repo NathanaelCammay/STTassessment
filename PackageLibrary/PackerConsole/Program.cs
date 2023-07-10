@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Globalization;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using PackageLibrary;
 
@@ -17,12 +19,38 @@ List<string> tempList = new List<string>(testCases);
 tempList.RemoveAt(tempList.IndexOf(elementToDelete));
 var refinedTestCases = tempList.ToArray();  ////// remove unneeded element from array
 
-Console.WriteLine(refinedTestCases);
 
-//foreach (string testCase in refinedTestCases)
-//{
-//    String[] packageDelimiters = { ":", ")1", ")2" };
-//}
+
+foreach (string testCase in refinedTestCases)
+{
+    var standardMaxWeight = 100;
+    var maxPackWeight = new Pack(); // create instance of an item
+    String[] testCaseDelimiter = { ":", " "};
+
+    var testCaseResult = testCase.Split(testCaseDelimiter, StringSplitOptions.RemoveEmptyEntries);
+
+    maxPackWeight.MaxWeight = Int32.Parse(testCaseResult[0]); // convert string value to integer and set max weight
+
+    for (int i = 1; i < testCaseResult.Length; i++)
+    {
+        var pack = new Pack();
+        var itemString = Helper.GetStringBetweenCharacters(testCaseResult[i], '(', ')'); // extract values from brackets
+        var itemArray = itemString.Split(','); // add values to an array
+
+        // set pack properties
+        pack.Index = Int32.Parse(itemArray[0]);
+        pack.Weight = decimal.Parse(itemArray[1]);
+        pack.Cost = decimal.Parse(itemArray[2], NumberStyles.Currency);
+
+        if (pack.Weight < standardMaxWeight && pack.WeightPlusCost < standardMaxWeight)
+        {
+            Console.WriteLine("This is a avalid pack!");
+        }
+
+    }
+
+
+}
 
 
 
