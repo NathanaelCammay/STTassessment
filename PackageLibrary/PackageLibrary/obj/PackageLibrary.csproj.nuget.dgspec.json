@@ -28,8 +28,8 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "\\\\etas4ivm03\\NugetRepository\\PurpleBus\\Master\\Release": {},
           "\\\\etas4ivm03\\Packages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/hollard-insure/24c0e85e-eefd-46da-bc5e-2d5b48486c91/_packaging/hollard-packages-feed/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/hollard-insure/24c0e85e-eefd-46da-bc5e-2d5b48486c91/_packaging/hollard-packages-feed/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hollard-insure/24c0e85e-eefd-46da-bc5e-2d5b48486c91/_packaging/purpleheron-feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
